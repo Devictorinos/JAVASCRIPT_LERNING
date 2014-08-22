@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var car = {};
+
+        Object.defineProperty(car, 'doors', {
+           configurable: true,
+           value: 4
+        });
+
+        Object.defineProperty(car, 'wheels', {
+            configurable: false,
+            value: 4
+        });
+
+        delete car.doors;
+
+        console.log(car.doors);
+        car.doors = 4;
+        console.log(car.doors);
+        delete car.wheels;
+
+        console.log(car.wheels);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
