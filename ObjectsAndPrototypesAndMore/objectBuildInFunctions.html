@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var car = {};
+
+        Object.defineProperty(car, 'doors', {
+            configurable: true,
+            writable: true,
+            enumerable: true,
+            value: 4
+        });
+
+        Object.defineProperty(car, 'wheels', {
+            configurable: true,
+            writable: true,
+            enumerable: true,
+            value: 4
+        });
+
+
+        Object.defineProperty(car, 'secretTrackingDeviceEnabled', {
+            enumerable: false,
+            value: true
+        });
+
+
+        console.log(Object.keys(car));
+        console.log(Object.getOwnPropertyNames(car));
+        console.log(car.propertyIsEnumerable('secretTrackingDeviceEnabled'));
+        console.log(Object.getOwnPropertyDescriptor(car, 'wheels'));
+        console.log(Object.getOwnPropertyDescriptor(car, 'doors'));
+        console.log(Object.getOwnPropertyDescriptor(car, 'secretTrackingDeviceEnabled'));
+
+
+        /* ---------------------------------------------- */
+          /* -------Object.getOwnPropertyNames ------- */
+
+        var box = Object.create({}, {
+            openLid: {
+                value: function() {
+                    return "nothing";
+                },
+                enumerable: true
+            },
+
+            openSecretCompartment: {
+                value: function() {
+                    return "treasure";
+                },
+                enumerable: false
+            }
+        });
+
+        console.log(box);//will output only openLid property
+        console.log(Object.getOwnPropertyNames(box).sort());//will output both of propertys
+
+        /* ---------------------------------------------- */
+            /* -------Object.getPrototypeOf------- */
+
+        var a  = {};
+
+        console.log(Object.getPrototypeOf(car) === Object.prototype && Object.prototype === a.__proto__);
+
+        /* ---------------------------------------------- */
+           /* -------Object.hasOwnProperty------- */
+
+        var foo = {
+            foo: 'foo'
+        };
+
+        var bar = Object.create(foo, {
+           bar: { enumerable: true,
+                  value: 'bar'
+           }
+        });
+
+
+
+        for (var x in bar) {
+            console.log(x);
+        }
+        console.log("----");
+        var myPropsBar = Object.getOwnPropertyNames(bar).map( function(i) {
+            return bar.hasOwnProperty(i) ? i : undefined;
+        });
+
+
+        console.log(myPropsBar);
+
+        /* ---------------------------------------------- */
+              /* ------- Object.isFrozen ------- */
+
+        var bombPop = {
+            wrapping: 'plastic',
+            flavors: ['Cherry', 'Lime', 'Blue Rasberry']
+        }
+
+        console.log(Object.isFrozen(bombPop));
+
+        delete bombPop.wrapping;
+
+        console.log(bombPop.wrapping);
+
+        Object.freeze(bombPop);
+
+        delete bombPop.flavors;
+        console.log(bombPop.flavors);
+        console.log("-- is frozen --");
+        console.log(Object.isFrozen(bombPop));
+
+
+        /* ---------------------------------------------- */
+           /* ------- Object.prototype.isPrototypeOf ------- */
+        console.log('prototype of---');
+
+        function Rectangle() {
+        }
+
+        var rec = new Rectangle();
+
+        console.log(Rectangle.prototype.isPrototypeOf(rec));
+
+        var aaa =  {};
+
+        var bbb =  Object.create(aaa);
+
+        console.log(aaa.isPrototypeOf(bbb));
+
+
+        /* ---------------------------------------------- */
+            /* ------- Object.isExtensible ------- */
+        var cars = {
+
+            doors: 4
+        };
+
+        console.log("extensible ---");
+
+        console.log(Object.isExtensible(cars) === true);
+
+        Object.preventExtensions(cars);
+
+        console.log(Object.isExtensible(cars)  === true);
+
+        cars.wheels = 4;// not be added to the object
+        console.log(cars);
+
+
+        /* ---------------------------------------------- */
+             /* ------- Object.isSealed ------- */
+
+        console.log("Object.isSealed --- ");
+
+        var ziplockBag = {};
+
+        console.log(Object.isSealed(ziplockBag) === true);
+        console.log(Object.isExtensible(ziplockBag));
+
+        Object.seal(ziplockBag);
+
+        ziplockBag.bag = "guchi";
+        console.log(ziplockBag);
+        console.log(Object.isSealed(ziplockBag) === true);
+
+
+        console.log(Object.isExtensible(ziplockBag));
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
