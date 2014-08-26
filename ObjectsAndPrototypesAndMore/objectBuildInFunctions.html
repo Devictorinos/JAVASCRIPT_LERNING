@@ -168,6 +168,104 @@
         console.log(Object.isExtensible(ziplockBag));
 
 
+        /* ---------------------------------------------- */
+              /* ------- Object.valueOf  ------- */
+        console.log("valueOf ---");
+        var pop = function(name) {
+            this.name = name;
+        }
+
+        var tesla = Object.create(pop.prototype, {
+
+            name: {
+                value: 'tesla'
+            }
+        });
+
+        console.log(tesla.valueOf());
+
+        pop.prototype.valueOf = function() {// adding valueOf function to the prototype of pop.
+            return this.name;
+        }
+
+        console.log(tesla.valueOf());
+        console.log(pop.prototype);
+
+
+        /* ---------------------------------------------- */
+             /* ------- Object.is  ------- */
+        console.log("Object.is ---");
+        console.log(Object.is('true', 'true'));
+        console.log(Object.is('True', 'true'));
+
+        console.log(NaN === 0/0);
+        console.log(Object.is(NaN, 0/0));
+
+
+        /* ---------------------------------------------- */
+           /* ------- Object.defineProperties  ------- */
+
+        console.log("Object.defineProperties ---");
+
+        var shirt = {};
+
+        Object.defineProperties(shirt, {
+
+            'color' : {
+                writable: true,
+                enumerable: true,
+                configurable: true,
+                value: 'red'
+            },
+
+            'size': {
+                writable: true,
+                enumerable: true,
+                configurable: true,
+                value: 'XL'
+            }
+        });
+
+        console.log(shirt.color);
+        console.log(shirt.size);
+
+
+        /* ---------------------------------------------- */
+              /* ------- Object.prototype  ------- */
+
+        console.log("Object.prototype ---");
+
+
+        var Dog = function(){};
+
+        Dog.prototype.speak = function() {
+          return "woof";
+        };
+
+        var Cat = function(){};
+
+        Cat.prototype.speak = function(){
+            return "meow";
+        };
+
+        var Tom = function(){};
+
+        Tom.prototype = new Cat();
+
+        var Bovy = new Tom();
+
+        console.log("bovy - " + Bovy.speak());
+
+        console.log("bovy prototype chain is empty - " + Bovy.prototype);
+        console.log(Tom.prototype);
+
+        // Setting the prototype of an object instance will not affect the instantiated properties
+
+
+        Bovy.prototype = new Dog();
+
+        console.log(Bovy.prototype);
+        console.log(Bovy.speak());
     </script>
 </head>
 <body>
