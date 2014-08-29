@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title></title>
-<script type="text/javascript">
+
    var friend = {
       warmth: 0,
       useSweater: function(level) {
@@ -28,9 +24,3 @@
     friend.useSweater.apply(me,[100]);
 
     console.log(me.isWarm());
-</script>
-</head>
-<body>
-  <h3>foo</h3>
-</body>
-</html>

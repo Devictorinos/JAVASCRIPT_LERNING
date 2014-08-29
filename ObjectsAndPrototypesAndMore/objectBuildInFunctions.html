@@ -1,274 +1,264 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <script type="text/javascript">
-        var car = {};
 
-        Object.defineProperty(car, 'doors', {
-            configurable: true,
-            writable: true,
-            enumerable: true,
-            value: 4
-        });
+var car = {};
 
-        Object.defineProperty(car, 'wheels', {
-            configurable: true,
-            writable: true,
-            enumerable: true,
-            value: 4
-        });
+Object.defineProperty(car, 'doors', {
+    configurable: true,
+    writable: true,
+    enumerable: true,
+    value: 4
+});
 
+Object.defineProperty(car, 'wheels', {
+    configurable: true,
+    writable: true,
+    enumerable: true,
+    value: 4
+});
 
-        Object.defineProperty(car, 'secretTrackingDeviceEnabled', {
-            enumerable: false,
-            value: true
-        });
 
+Object.defineProperty(car, 'secretTrackingDeviceEnabled', {
+    enumerable: false,
+    value: true
+});
 
-        console.log(Object.keys(car));
-        console.log(Object.getOwnPropertyNames(car));
-        console.log(car.propertyIsEnumerable('secretTrackingDeviceEnabled'));
-        console.log(Object.getOwnPropertyDescriptor(car, 'wheels'));
-        console.log(Object.getOwnPropertyDescriptor(car, 'doors'));
-        console.log(Object.getOwnPropertyDescriptor(car, 'secretTrackingDeviceEnabled'));
 
+console.log(Object.keys(car));
+console.log(Object.getOwnPropertyNames(car));
+console.log(car.propertyIsEnumerable('secretTrackingDeviceEnabled'));
+console.log(Object.getOwnPropertyDescriptor(car, 'wheels'));
+console.log(Object.getOwnPropertyDescriptor(car, 'doors'));
+console.log(Object.getOwnPropertyDescriptor(car, 'secretTrackingDeviceEnabled'));
 
-        /* ---------------------------------------------- */
-          /* -------Object.getOwnPropertyNames ------- */
 
-        var box = Object.create({}, {
-            openLid: {
-                value: function() {
-                    return "nothing";
-                },
-                enumerable: true
-            },
+/* ---------------------------------------------- */
+  /* -------Object.getOwnPropertyNames ------- */
 
-            openSecretCompartment: {
-                value: function() {
-                    return "treasure";
-                },
-                enumerable: false
-            }
-        });
+var box = Object.create({}, {
+    openLid: {
+        value: function() {
+            return "nothing";
+        },
+        enumerable: true
+    },
 
-        console.log(box);//will output only openLid property
-        console.log(Object.getOwnPropertyNames(box).sort());//will output both of propertys
+    openSecretCompartment: {
+        value: function() {
+            return "treasure";
+        },
+        enumerable: false
+    }
+});
 
-        /* ---------------------------------------------- */
-            /* -------Object.getPrototypeOf------- */
+console.log(box);//will output only openLid property
+console.log(Object.getOwnPropertyNames(box).sort());//will output both of propertys
 
-        var a  = {};
+/* ---------------------------------------------- */
+    /* -------Object.getPrototypeOf------- */
 
-        console.log(Object.getPrototypeOf(car) === Object.prototype && Object.prototype === a.__proto__);
+var a  = {};
 
-        /* ---------------------------------------------- */
-           /* -------Object.hasOwnProperty------- */
+console.log(Object.getPrototypeOf(car) === Object.prototype && Object.prototype === a.__proto__);
 
-        var foo = {
-            foo: 'foo'
-        };
+/* ---------------------------------------------- */
+   /* -------Object.hasOwnProperty------- */
 
-        var bar = Object.create(foo, {
-           bar: { enumerable: true,
-                  value: 'bar'
-           }
-        });
+var foo = {
+    foo: 'foo'
+};
 
+var bar = Object.create(foo, {
+   bar: { enumerable: true,
+          value: 'bar'
+   }
+});
 
 
-        for (var x in bar) {
-            console.log(x);
-        }
-        console.log("----");
-        var myPropsBar = Object.getOwnPropertyNames(bar).map( function(i) {
-            return bar.hasOwnProperty(i) ? i : undefined;
-        });
 
+for (var x in bar) {
+    console.log(x);
+}
+console.log("----");
+var myPropsBar = Object.getOwnPropertyNames(bar).map( function(i) {
+    return bar.hasOwnProperty(i) ? i : undefined;
+});
 
-        console.log(myPropsBar);
 
-        /* ---------------------------------------------- */
-              /* ------- Object.isFrozen ------- */
+console.log(myPropsBar);
 
-        var bombPop = {
-            wrapping: 'plastic',
-            flavors: ['Cherry', 'Lime', 'Blue Rasberry']
-        }
+/* ---------------------------------------------- */
+      /* ------- Object.isFrozen ------- */
 
-        console.log(Object.isFrozen(bombPop));
+var bombPop = {
+    wrapping: 'plastic',
+    flavors: ['Cherry', 'Lime', 'Blue Rasberry']
+}
 
-        delete bombPop.wrapping;
+console.log(Object.isFrozen(bombPop));
 
-        console.log(bombPop.wrapping);
+delete bombPop.wrapping;
 
-        Object.freeze(bombPop);
+console.log(bombPop.wrapping);
 
-        delete bombPop.flavors;
-        console.log(bombPop.flavors);
-        console.log("-- is frozen --");
-        console.log(Object.isFrozen(bombPop));
+Object.freeze(bombPop);
 
+delete bombPop.flavors;
+console.log(bombPop.flavors);
+console.log("-- is frozen --");
+console.log(Object.isFrozen(bombPop));
 
-        /* ---------------------------------------------- */
-           /* ------- Object.prototype.isPrototypeOf ------- */
-        console.log('prototype of---');
 
-        function Rectangle() {
-        }
+/* ---------------------------------------------- */
+   /* ------- Object.prototype.isPrototypeOf ------- */
+console.log('prototype of---');
 
-        var rec = new Rectangle();
+function Rectangle() {
+}
 
-        console.log(Rectangle.prototype.isPrototypeOf(rec));
+var rec = new Rectangle();
 
-        var aaa =  {};
+console.log(Rectangle.prototype.isPrototypeOf(rec));
 
-        var bbb =  Object.create(aaa);
+var aaa =  {};
 
-        console.log(aaa.isPrototypeOf(bbb));
+var bbb =  Object.create(aaa);
 
+console.log(aaa.isPrototypeOf(bbb));
 
-        /* ---------------------------------------------- */
-            /* ------- Object.isExtensible ------- */
-        var cars = {
 
-            doors: 4
-        };
+/* ---------------------------------------------- */
+    /* ------- Object.isExtensible ------- */
+var cars = {
 
-        console.log("extensible ---");
+    doors: 4
+};
 
-        console.log(Object.isExtensible(cars) === true);
+console.log("extensible ---");
 
-        Object.preventExtensions(cars);
+console.log(Object.isExtensible(cars) === true);
 
-        console.log(Object.isExtensible(cars)  === true);
+Object.preventExtensions(cars);
 
-        cars.wheels = 4;// not be added to the object
-        console.log(cars);
+console.log(Object.isExtensible(cars)  === true);
 
+cars.wheels = 4;// not be added to the object
+console.log(cars);
 
-        /* ---------------------------------------------- */
-             /* ------- Object.isSealed ------- */
 
-        console.log("Object.isSealed --- ");
+/* ---------------------------------------------- */
+     /* ------- Object.isSealed ------- */
 
-        var ziplockBag = {};
+console.log("Object.isSealed --- ");
 
-        console.log(Object.isSealed(ziplockBag) === true);
-        console.log(Object.isExtensible(ziplockBag));
+var ziplockBag = {};
 
-        Object.seal(ziplockBag);
+console.log(Object.isSealed(ziplockBag) === true);
+console.log(Object.isExtensible(ziplockBag));
 
-        ziplockBag.bag = "guchi";
-        console.log(ziplockBag);
-        console.log(Object.isSealed(ziplockBag) === true);
+Object.seal(ziplockBag);
 
+ziplockBag.bag = "guchi";
+console.log(ziplockBag);
+console.log(Object.isSealed(ziplockBag) === true);
 
-        console.log(Object.isExtensible(ziplockBag));
 
+console.log(Object.isExtensible(ziplockBag));
 
-        /* ---------------------------------------------- */
-              /* ------- Object.valueOf  ------- */
-        console.log("valueOf ---");
-        var pop = function(name) {
-            this.name = name;
-        }
 
-        var tesla = Object.create(pop.prototype, {
+/* ---------------------------------------------- */
+      /* ------- Object.valueOf  ------- */
+console.log("valueOf ---");
+var pop = function(name) {
+    this.name = name;
+}
 
-            name: {
-                value: 'tesla'
-            }
-        });
+var tesla = Object.create(pop.prototype, {
 
-        console.log(tesla.valueOf());
+    name: {
+        value: 'tesla'
+    }
+});
 
-        pop.prototype.valueOf = function() {// adding valueOf function to the prototype of pop.
-            return this.name;
-        }
+console.log(tesla.valueOf());
 
-        console.log(tesla.valueOf());
-        console.log(pop.prototype);
+pop.prototype.valueOf = function() {// adding valueOf function to the prototype of pop.
+    return this.name;
+}
 
+console.log(tesla.valueOf());
+console.log(pop.prototype);
 
-        /* ---------------------------------------------- */
-             /* ------- Object.is  ------- */
-        console.log("Object.is ---");
-        console.log(Object.is('true', 'true'));
-        console.log(Object.is('True', 'true'));
 
-        console.log(NaN === 0/0);
-        console.log(Object.is(NaN, 0/0));
+/* ---------------------------------------------- */
+     /* ------- Object.is  ------- */
+console.log("Object.is ---");
+console.log(Object.is('true', 'true'));
+console.log(Object.is('True', 'true'));
 
+console.log(NaN === 0/0);
+console.log(Object.is(NaN, 0/0));
 
-        /* ---------------------------------------------- */
-           /* ------- Object.defineProperties  ------- */
 
-        console.log("Object.defineProperties ---");
+/* ---------------------------------------------- */
+   /* ------- Object.defineProperties  ------- */
 
-        var shirt = {};
+console.log("Object.defineProperties ---");
 
-        Object.defineProperties(shirt, {
+var shirt = {};
 
-            'color' : {
-                writable: true,
-                enumerable: true,
-                configurable: true,
-                value: 'red'
-            },
+Object.defineProperties(shirt, {
 
-            'size': {
-                writable: true,
-                enumerable: true,
-                configurable: true,
-                value: 'XL'
-            }
-        });
+    'color' : {
+        writable: true,
+        enumerable: true,
+        configurable: true,
+        value: 'red'
+    },
 
-        console.log(shirt.color);
-        console.log(shirt.size);
+    'size': {
+        writable: true,
+        enumerable: true,
+        configurable: true,
+        value: 'XL'
+    }
+});
 
+console.log(shirt.color);
+console.log(shirt.size);
 
-        /* ---------------------------------------------- */
-              /* ------- Object.prototype  ------- */
 
-        console.log("Object.prototype ---");
+/* ---------------------------------------------- */
+      /* ------- Object.prototype  ------- */
 
+console.log("Object.prototype ---");
 
-        var Dog = function(){};
 
-        Dog.prototype.speak = function() {
-          return "woof";
-        };
+var Dog = function(){};
 
-        var Cat = function(){};
+Dog.prototype.speak = function() {
+  return "woof";
+};
 
-        Cat.prototype.speak = function(){
-            return "meow";
-        };
+var Cat = function(){};
 
-        var Tom = function(){};
+Cat.prototype.speak = function(){
+    return "meow";
+};
 
-        Tom.prototype = new Cat();
+var Tom = function(){};
 
-        var Bovy = new Tom();
+Tom.prototype = new Cat();
 
-        console.log("bovy - " + Bovy.speak());
+var Bovy = new Tom();
 
-        console.log("bovy prototype chain is empty - " + Bovy.prototype);
-        console.log(Tom.prototype);
+console.log("bovy - " + Bovy.speak());
 
-        // Setting the prototype of an object instance will not affect the instantiated properties
+console.log("bovy prototype chain is empty - " + Bovy.prototype);
+console.log(Tom.prototype);
 
+// Setting the prototype of an object instance will not affect the instantiated properties
 
-        Bovy.prototype = new Dog();
 
-        console.log(Bovy.prototype);
-        console.log(Bovy.speak());
-    </script>
-</head>
-<body>
+Bovy.prototype = new Dog();
 
-</body>
-</html>
+console.log(Bovy.prototype);
+console.log(Bovy.speak());

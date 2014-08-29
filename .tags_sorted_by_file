@@ -1,0 +1,23 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+foo	ObjectsAndPrototypesAndMore/literalTypeDeclaration.html	/^            function foo() {$/;"	f
+Foo	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^function Foo(status, person) {$/;"	f
+Foo	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^}$/;"	c
+Foo.constructor	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^Foo.prototype.constructor = Foo;$/;"	m
+Person	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^function Person (person){$/;"	c
+Person.names	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^Person.prototype.names = function() {$/;"	m
+Status	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^function Status(status, person){$/;"	c
+Status.constructor	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^Status.prototype.constructor = Status;$/;"	m
+Status.showStatus	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^Status.prototype.showStatus = function() {$/;"	m
+Rectangle	ObjectsAndPrototypesAndMore/objectBuildInFunctions.html	/^        function Rectangle() {$/;"	f
+Food	ObjectsAndPrototypesAndMore/tests.js	/^        function Food(name,price) {$/;"	f
+Food	ObjectsAndPrototypesAndMore/tests.js	/^        }$/;"	c
+Food.color	ObjectsAndPrototypesAndMore/tests.js	/^        Food.prototype.color = function(color) {$/;"	m
+Food.constructor	ObjectsAndPrototypesAndMore/tests.js	/^        Food.prototype.constructor = Food;$/;"	m
+Product	ObjectsAndPrototypesAndMore/tests.js	/^         function Product(name, price) {$/;"	c
+Product.getDiscount	ObjectsAndPrototypesAndMore/tests.js	/^        Product.prototype.getDiscount = function(disc) {$/;"	m
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+foo	tests.html	/^function foo(a, b) {$/;"	f

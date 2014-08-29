@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <script>
-
-
-  var user = {
+ var user = {
 
         sayName: function() {
             console.log(this.name)
@@ -34,15 +27,3 @@ foo.bar = "vik";
  foo2.bar = "vik2";
   console.log(foo2);
   console.log(foo.bar);
-
-
-
-
-
-
-    </script>
-</head>
-<body>
- <h1>hey</h1>
-</body>
-</html>
