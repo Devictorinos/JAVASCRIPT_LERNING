@@ -25,6 +25,9 @@
             
         }
 
+        Food.prototype = Product.prototype;
+        Food.prototype.constructor = Food;
+
         Food.prototype.color = function(color) {
             if(typeof color !== "undefined") {
                 return "green";
@@ -36,4 +39,4 @@
        // Food.prototype = Object.create(Product.prototype);
         var apple = new Food("apple", 7);
 
-        console.log(apple);
+        
