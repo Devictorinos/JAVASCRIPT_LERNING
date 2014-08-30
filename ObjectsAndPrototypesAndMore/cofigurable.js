@@ -11,6 +11,7 @@ Object.defineProperty(car, 'wheels', {
 });
 
 
+
 //deletting car doors property
 delete car.doors;//delete is succes becouse the property isd set to -configurable - true
 

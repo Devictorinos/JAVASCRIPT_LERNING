@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animated String</title>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <style>
+        h2 {
+  font-size: 30px;  
+  margin-top: 0em;
+  height: 30px;
+}
+
+    </style>
+</head>
+<body>
+    <div style=" width: 500px; height: 100px; text-align:center; line-height: 65px; color: green;border: 1px solid #000; margin: 200px auto;" >
+        <h1 id="animStr"></h1>
+    </div>
+
+    <div class="solink" data-linkid="25584144">
+    <div class="linkhover">loading....</div>
+</div>
+
+    <h2 id="repeater"></h2>
+    <h2 id="repeater2"></h2>
+    <h2 id="repeater3"></h2>
+    <h2 id="repeater4"></h2>
+        <script type="text/javascript">
+
+
+        var animText =  {
+
+            animStr: '',
+            delay: 300,
+
+            setDelay: function(delay) {
+                this.delay = delay;
+            },
+
+            DoAnimation: function(string, selector) {
+
+                this.animStr = string.split('');
+              
+               
+                for (var i = 0; i <= string.length-1; i++) {
+
+                    setTimeout(function () {    
+                        document.getElementById(selector).innerHTML += animText.animStr.shift();                 
+                    },this.delay * i);             
+                };
+
+                setTimeout( function() {                   
+                    document.getElementById(selector).innerHTML = '';                
+                    animText.DoAnimation(string, selector);                 
+
+                }, this.delay * i + 1200) 
+
+            }
+
+        }
+            
+        
+        animText.DoAnimation("Hello", "animStr");
+        animText.setDelay(900);
+
+        function stringGenerator(str) {
+
+            var i = 0;
+
+            for (vi = 0; i <= str.length-1; i++) {
+
+            }
+            return function () {
+                if (i < str.length)
+                    return str.charAt(i++);
+                i = 0;
+                return null;
+            };
+}
+
+
+
+/*function stringGenerator(str) {
+    var i = 0;
+    return function () {
+        if (i < str.length)
+            return str.charAt(i++);
+        i = 0;
+        return null;
+    };
+}
+//function to loop using setTimeout, with a couple neat little tricks for ending the loop
+
+function timeoutLoop(fn, freq, callback) {
+    function looper() {
+        var ret = fn();
+        if (ret !== false && ret !== null && ret !== undefined)
+            return window.setTimeout(looper, freq);
+        if (callback)
+            callback();
+    }
+    window.setTimeout(looper, freq)
+}
+//function which combines these with logic about text in the DOM, to produce your typing effect
+
+function type(node, str, freq) {
+    var s = stringGenerator(str),
+        f = function () {
+            var chr = s();
+            if (chr === null)
+                return false;
+            if (node.lastChild.nodeType === 3)
+                node.lastChild.data += chr;
+            else
+                node.appendChild(document.createTextNode(chr));
+            return true;
+        };
+    timeoutLoop(f, freq);
+}
+        type(document.body, 'Hello world!', 500);*/
+
+    ///    Helper.log2Screen('<code>repeatEternal(\'How to irritate people and make things generally annoying\')</code>');
+//Helper.log2Screen('<code>repeatEternal(\'How to irritate people and make things generally annoying\')</code>');
+repeatEternal('OMG, whatever happened to [blink]???  ', 0.15);
+repeatEternal('Let\'s make things more ep(ilept)ic :D  ', 0.05, $('#repeater2'), true);
+repeatEternal('Holy cow, this really hurts your eyes', 0.1, $('#repeater3'));
+repeatEternal('\'Nough with this typing galore!  ', 0.25, $('#repeater4'), true);
+
+function repeatEternal(str, time, rdiv, startReversed){
+    time = time*1000 || 200;
+    rdiv = rdiv || $('#repeater')
+    var position = 0
+       ,l2r = true;
+    
+    return eternal(startReversed ? str.slice(-1) : str);
+    
+    function eternal(ly){
+        rdiv.html( (l2r ? rdiv.html() + ly[0] : ly.slice(0, -1)));
+        l2r = ly.length === 1 ? !l2r : l2r;
+        ly = ly.length < 2 ? str : !l2r ? ly.slice(0,-1) : ly.slice(1);
+       // rdiv.css('color', rC());
+        setTimeout( function(){ eternal(ly); }, time );
+    }
+}
+
+function rC() {
+    return String.Format('rgba({0})',
+              [Math.floor(100+Math.random()*155),
+               Math.floor(50+Math.random()*205),
+               Math.floor(150+Math.random()*55),
+               0.5+Math.random()].join()
+           );
+}
+    </script>
+</body>
+</html>

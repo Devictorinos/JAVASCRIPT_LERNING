@@ -39,4 +39,5 @@
        // Food.prototype = Object.create(Product.prototype);
         var apple = new Food("apple", 7);
 
+        console.log(Food.prototype.constructor);
         
