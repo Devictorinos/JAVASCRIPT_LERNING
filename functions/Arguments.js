@@ -41,14 +41,14 @@ var Dispacher = {
 
     sum: function() {
         var args = Array.prototype.slice.call(arguments);
-        console.log(args + " args");
+       // console.log(args + " args");
         return args.reduce(function (previousValue, currentValue, index, array) {
-            console.log(previousValue + " prev")
+            /*console.log(previousValue + " prev")
             console.log(currentValue + " cur")
             console.log(index + " index")
             console.log(array + " array")
             console.log(previousValue + currentValue + " return")
-            console.log("----------------------");
+            console.log("----------------------");*/
 
             return previousValue + currentValue;
         });
@@ -58,14 +58,16 @@ var Dispacher = {
 
 
 
+
 var Proxy = {
     relay: function (method) {
     var args; 
     args = Array.prototype.splice.call(arguments, 1);
+    console.log(args)
     return Dispacher[method].apply(Dispacher, args);
     }
 };
 
 
 console.log(Proxy.relay('join', 'bar', 'baz'));
-console.log(Proxy.relay('sum', "b", "c", "d", "f"));
+//console.log(Proxy.relay('sum', "b", "c", "d", "f"));

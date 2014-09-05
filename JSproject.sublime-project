@@ -1,0 +1,16 @@
+{
+
+  "folders":
+  [
+    {
+      "follow_symlinks": true,
+      "path": "/var/www/JAVASCRIPT_LERNING/",
+      "name": "javascriptLearning"
+    },
+
+  ],
+    "setting":
+    {
+        "tab_size": 4
+    }
+}
