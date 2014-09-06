@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    var getUniqID = (function () {
+        var id = 0;
+
+        return function (element) {
+            if (!element.id) {
+                element.id = 'generate-uid-' + (id++);
+            };
+
+            return element.id;
+        };
+    })();
+
+    var elementWithID = document.createElement('p');
+    elementWithID.id = 'foo-bar';
+
+    var elementWithoutID = document.createElement('p');
+    var elementWithoutID2 = document.createElement('p');
+    getUniqID(elementWithID);
+    console.log(getUniqID(elementWithoutID));
+    console.log(getUniqID(elementWithoutID2));
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

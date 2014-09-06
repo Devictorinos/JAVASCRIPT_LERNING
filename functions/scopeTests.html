@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+<h1 id="carKey">click</h1>
+    
+</body>
+    <script type="text/javascript">
+
+/* WITH BYPASS REFERENCE TO THIS */
+var Car, tesla;
+Car = function() {
+        this.start = function() {
+        console.log("car started");
+    };
+ 
+
+    this.turnKey = function() {
+       var that = this;// creating bypass reference for this
+       var carKey = document.getElementById('carKey');
+
+        console.log(carKey);
+
+        carKey.onclick = function(event) {
+
+            that.start(); //it's work - that (this) belong to car object scope now
+            //this.start(); // here THIS is now refered on a dom element carkey not to the objec car.
+        };
+
+    };
+
+return this;
+};
+
+
+//tesla = new Car();
+// Once a user clicks the #carKey element they will see "Uncaught TypeError: Object has no method
+//tesla.turnKey();
+
+
+/* WITH CLOSURE */
+var Car2, proxy, tesla2;
+
+Car2 = function () {
+
+    this.start = function () {
+
+        return console.log("car started");
+    };
+
+    this.turnKey = function () {
+        var carKey;
+
+        carKey         = document.getElementById('carKey');
+        carKey.onclick = proxy(function () {
+
+                this.start();
+            }, this);       
+        };
+    return this;
+};
+
+proxy = function (callback, self) {
+        return function () {
+            return callback.apply(self, arguments);
+        };
+    };
+
+tesla2 = new Car2();
+ 
+// Once a user click's the #carKey element they will see "car started"
+tesla2.turnKey()
+
+
+
+    </script>
+</html>

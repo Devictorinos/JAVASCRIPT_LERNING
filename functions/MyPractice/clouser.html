@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+<h1 id="clicker" style="cursor: pointer;">click</h1>
+
+</div>
+    <script>
+
+    var Car = function () {
+        this.speed  = 1800;
+        this.wheels = 4;
+
+        this.drive = function () {
+            console.log("cars speed is : " + this.speed + " and car wheels is : " + this.wheels);
+        }
+
+        this.startDrive = function () {
+            
+            var clicker = document.getElementById('clicker');
+            clicker.onclick = closureHelper( function () {
+
+                this.drive();
+            }, this);
+        }
+    }
+
+    var closureHelper = function (callback, self) {
+        
+        return function () {
+
+            return callback.apply(self, arguments);
+        }
+    };
+
+    var car  = new Car();
+
+    car.startDrive();
+
+    </script>
+</body>
+</html>
