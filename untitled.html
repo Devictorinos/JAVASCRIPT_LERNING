@@ -6,42 +6,84 @@
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <meta charset="UTF-8">
     <title>Document</title>
-<script>
-    var events = new Array();
-    $(document).ready(function(){
 
-            var data = [{"id":"136","initials":"M.H.","last_name":"Tjon-Sien-Fat","start":"2014-08-05 09:00:00","end":"2014-08-05 13:00:00","allday":null,"calendar_color":"#00ffff"},{"id":"138","initials":"M.H.","last_name":"Tjon-Sien-Fat","start":"2014-08-04 09:00:00","end":"2014-08-04 13:00:00","allday":null,"calendar_color":"#00ffff"},{"id":"139","initials":"M.H.","last_name":"Tjon-Sien-Fat","start":"2014-08-07 07:30:00","end":"2014-08-07 11:30:00","allday":null,"calendar_color":"#00ffff"},{"id":"142","initials":"M.H.","last_name":"Tjon-Sien-Fat","start":"2014-08-06 00:00:00","end":"0000-00-00 00:00:00","allday":null,"calendar_color":"#00ffff"},{"id":"143","initials":"M.H.","last_name":"Tjon-Sien-Fat","start":"2014-08-06 11:30:00","end":"2014-08-06 15:30:00","allday":null,"calendar_color":"#00ffff"},{"id":"155","initials":"M.H.","last_name":"Tjon-Sien-Fat","start":"2014-08-10 09:00:00","end":"2014-08-10 13:00:00","allday":null,"calendar_color":"#00ffff"},{"id":"170","initials":"M.H.","last_name":"Tjon-Sien-Fat","start":"2014-08-28 10:00:00","end":"2014-08-28 15:00:00","allday":null,"calendar_color":"#00ffff"},{"id":"171","initials":"M.H.","last_name":"Tjon-Sien-Fat","start":"2014-08-26 08:00:00","end":"2014-08-26 12:30:00","allday":null,"calendar_color":"#00ffff"},{"id":"175","initials":"M.H.","last_name":"Tjon-Sien-Fat","start":"2014-08-30 07:00:00","end":"2014-08-30 14:30:00","allday":null,"calendar_color":"#00ffff"},{"id":"183","initials":"M.H.","last_name":"Tjon-Sien-Fat","start":"2014-08-29 07:30:00","end":"2014-08-29 13:00:00","allday":null,"calendar_color":"#00ffff"}];
-
-     $.each(data, function(key, val){
-                    
-                    
-                   var allday_data = val.allday;
-                   if (allday_data === 'true') {
-                       allday_data = true;
-                   } else {
-                       allday_data = false;
-                   };
-                   
-                   events.push({
-                       id: val.id,
-                       title: [val.initials] + [val.last_name],
-                       start: val.start,
-                       end: val.end,
-                       allDay: allday_data,
-                       color: val.calendar_color
-
-                  });
-
-               })
-
-console.log(events);
-    });
-
-
-</script>
 </head>
 
 <body>
-    
+  <div>
+    <ul>
+      <li class="liTest"><a class="testLink" href="">test</a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+  </div>
+    <div>
+    <ul>
+      <li class="liTest"><a class="testLink" href="">test</a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+  </div>
+    <div>
+    <ul>
+      <li class="liTest"><a class="testLink" href="">test</a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+  </div>
+    <div>
+    <ul>
+      <li class="liTest"><a class="testLink" href="">test</a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+  </div>
+    <script>
+
+    var a1 = document.getElementsByClassName('testLink')[0];
+    var a = document.querySelector('.testLink');
+    var aa = document.getElementsByTagName('a');
+    //console.log(a.item())
+    console.log(a.parentNode)
+    console.log(a1.parentNode)
+    console.log(aa)
+
+
+
+var ToPrimitive;
+ToPrimitive = function (obj) {
+    var func, functions, _i, _len;
+
+    functions = ['valueOf', 'toString'];
+
+    if (typeof obj === "object") {
+        if (obj instanceof Date) {
+            functions = ["toString", "valueOf"];
+        };
+
+        for (var _i = 0, _len = functions.length; _i < _len; _i++) {
+
+            func = functions[_i];
+
+            if (typeof obj[func] === "function") {
+
+                val = obj[func]();
+
+                if (typeof val === "string" || typeof val === "number" || typeof val === "bolean") {
+                    return val;
+                };
+            };
+        };
+
+        throw new Error("DefaultValue is ambigious."); 
+    };
+
+    return obj;
+}
+
+console.log(ToPrimitive(new Date()));
+
+
+</script>
 </body>
 </html>
