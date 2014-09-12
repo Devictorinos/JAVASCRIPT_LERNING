@@ -16,6 +16,7 @@ Money.prototype.toString = function() {
 Money.prototype.valueOf = function () {
     return this.cents;
 }
+}
 
 console.log(+dollar);
 console.log(dollar + '');

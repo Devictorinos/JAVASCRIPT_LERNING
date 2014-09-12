@@ -13,29 +13,29 @@
   <div>
     <ul>
       <li class="liTest"><a class="testLink" href="">test</a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
+      <li><a href="">test1</a></li>
+      <li><a href="">test2</a></li>
     </ul>
   </div>
     <div>
     <ul>
-      <li class="liTest"><a class="testLink" href="">test</a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
+      <li class="liTest"><a class="testLink" href="">test3</a></li>
+      <li><a href="">test4</a></li>
+      <li><a href="">test5</a></li>
     </ul>
   </div>
     <div>
     <ul>
-      <li class="liTest"><a class="testLink" href="">test</a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
+      <li class="liTest"><a class="testLink" href="">test6</a></li>
+      <li><a href="">test7</a></li>
+      <li><a href="">test8</a></li>
     </ul>
   </div>
     <div>
     <ul>
-      <li class="liTest"><a class="testLink" href="">test</a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
+      <li class="liTest"><a class="testLink" href="">test9</a></li>
+      <li><a href="">test10</a></li>
+      <li><a href="">test11</a></li>
     </ul>
   </div>
     <script>
@@ -44,11 +44,16 @@
     var a = document.querySelector('.testLink');
     var aa = document.getElementsByTagName('a');
     //console.log(a.item())
-    console.log(a.parentNode)
-    console.log(a1.parentNode)
     console.log(aa)
+    //console.log(a1.parentNode)
+   // console.log(aa)
 
-
+    for (var i = 0; i < aa.length; i++) {
+ 
+      if (i == 7) {
+          aa[i].style.color="red";
+      };
+    };
 
 var ToPrimitive;
 ToPrimitive = function (obj) {

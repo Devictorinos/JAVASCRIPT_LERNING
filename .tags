@@ -4,6 +4,33 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Bovy	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^console.log(Tom.prototype);$/;"	c
+Cake	ObjectsAndPrototypesAndMore/classPropertiesAndClassMethods.js	/^var Cake = function() {};$/;"	f
+Car	ObjectsAndPrototypesAndMore/prototypeTests.js	/^var Car = function (wheelCount) {$/;"	c
+Car	functions/closers.js	/^var Car, proxy, tesla;$/;"	v
+Car	functions/scopes.js	/^var Car, tesla;$/;"	c
+Car	functions/scopes.js	/^var Car, tesla;$/;"	v
+Car.drive	ObjectsAndPrototypesAndMore/prototypeTests.js	/^Car.prototype.drive = function (miles) {$/;"	m
+Car.drive	ObjectsAndPrototypesAndMore/prototypeTests.js	/^Car.prototype.drive = function(miles) {$/;"	m
+Car.odometer	ObjectsAndPrototypesAndMore/prototypeTests.js	/^Car.prototype.odometer = 0;\/\/ no changes because the property is set inside the objec and not in his prototype$/;"	m
+Car.start	functions/scopes.js	/^        this.start = function() {$/;"	m
+Car.turnKey	functions/scopes.js	/^    this.turnKey = function() {$/;"	m
+Car2	ObjectsAndPrototypesAndMore/prototypeTests.js	/^var Car2 = function (wheelCount) {$/;"	c
+Car2	functions/closers.js	/^var Car, proxy, tesla;$/;"	c
+Car2.drive	ObjectsAndPrototypesAndMore/prototypeTests.js	/^Car2.prototype.drive = function (miles) {$/;"	m
+Car2.odometer	ObjectsAndPrototypesAndMore/prototypeTests.js	/^Car2.prototype.odometer = 0;$/;"	m
+Car2.odometer	ObjectsAndPrototypesAndMore/prototypeTests.js	/^Car2.prototype.odometer = 2000;\/\/ changes not take effect because we all ready set a local odometer property with drive() function$/;"	m
+Car2.odometer	ObjectsAndPrototypesAndMore/prototypeTests.js	/^Car2.prototype.odometer = 200;$/;"	m
+Car2.start	functions/closers.js	/^    this.start = function () {$/;"	m
+Car2.turnKey	functions/closers.js	/^    this.turnKey = function () {$/;"	m
+Cat	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var Cat = function(){};$/;"	c
+Cat	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var Cat = function(){};$/;"	f
+Cat.speak	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^Cat.prototype.speak = function(){$/;"	m
+Dispacher.join	functions/Arguments.js	/^var Dispacher = {$/;"	m
+Dispacher.sum	functions/Arguments.js	/^    },$/;"	m
+Dog	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var Dog = function(){};$/;"	c
+Dog	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var Dog = function(){};$/;"	f
+Dog.speak	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^Dog.prototype.speak = function() {$/;"	m
 Foo	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^function Foo(status, person) {$/;"	f
 Foo	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^}$/;"	c
 Foo.constructor	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^Foo.prototype.constructor = Foo;$/;"	m
@@ -11,13 +38,93 @@ Food	ObjectsAndPrototypesAndMore/tests.js	/^        function Food(name,price) {$
 Food	ObjectsAndPrototypesAndMore/tests.js	/^        }$/;"	c
 Food.color	ObjectsAndPrototypesAndMore/tests.js	/^        Food.prototype.color = function(color) {$/;"	m
 Food.constructor	ObjectsAndPrototypesAndMore/tests.js	/^        Food.prototype.constructor = Food;$/;"	m
+Friend.useSweater	build-in-functions.js	/^      warmth: 0,$/;"	m
+Friend.warmth	build-in-functions.js	/^   var Friend = {$/;"	p
+Me.isWarm	build-in-functions.js	/^      warmth: 0,$/;"	m
+Me.warmth	build-in-functions.js	/^   var Me = {$/;"	p
+Money	Jargon/jargonTests.js	/^var Money = function (val, sum) {$/;"	c
+Money.toString	Jargon/jargonTests.js	/^Money.prototype.toString = function() {$/;"	m
+Money.valueOf	Jargon/jargonTests.js	/^Money.prototype.valueOf = function () {$/;"	m
 Person	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^function Person (person){$/;"	c
 Person.names	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^Person.prototype.names = function() {$/;"	m
 Product	ObjectsAndPrototypesAndMore/tests.js	/^         function Product(name, price) {$/;"	c
 Product.getDiscount	ObjectsAndPrototypesAndMore/tests.js	/^        Product.prototype.getDiscount = function(disc) {$/;"	m
-Rectangle	ObjectsAndPrototypesAndMore/objectBuildInFunctions.html	/^        function Rectangle() {$/;"	f
+Proxy.relay	functions/Arguments.js	/^var Proxy = {$/;"	m
+Rectangle	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^function Rectangle() {$/;"	f
 Status	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^function Status(status, person){$/;"	c
 Status.constructor	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^Status.prototype.constructor = Status;$/;"	m
 Status.showStatus	ObjectsAndPrototypesAndMore/newTypeDeclaration.js	/^Status.prototype.showStatus = function() {$/;"	m
-foo	ObjectsAndPrototypesAndMore/literalTypeDeclaration.html	/^            function foo() {$/;"	f
-foo	tests.html	/^function foo(a, b) {$/;"	f
+String.reverse	ObjectsAndPrototypesAndMore/classPropertiesAndClassMethods.js	/^console.log('----------------->');$/;"	f
+ToPrimitive	Jargon/jargonTests.js	/^var ToPrimitive;$/;"	f
+ToPrimitive	Jargon/jargonTests.js	/^var ToPrimitive;$/;"	v
+Tom	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var Tom = function(){};$/;"	c
+Tom	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var Tom = function(){};$/;"	f
+VendingMachine	functions/arrowProne.js	/^;var VendingMachine = function () {$/;"	c
+VendingMachine2	functions/arrowProne.js	/^var VendingMachine2 = function () {$/;"	c
+VendingMachine2.dispense	functions/arrowProne.js	/^    var dispense = function () {$/;"	m
+a	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var a  = {};$/;"	v
+aaa	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var aaa =  {};$/;"	v
+add	Codewars/practice.js	/^function add(n){$/;"	f
+arr	functions/MyPractice/someArrayPractice.js	/^var arr = ["mitsubishi", "mazda", "opel", "citroen","mesedess", "BMW"];$/;"	v
+arr2	functions/MyPractice/someArrayPractice.js	/^var arr2 = arr.reverse();$/;"	v
+bombPop.flavors	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^    wrapping: 'plastic',$/;"	p
+bombPop.wrapping	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var bombPop = {$/;"	p
+boz	ObjectsAndPrototypesAndMore/literalTypeDeclaration.js	/^var boz = {};$/;"	v
+canHazAccess	functions/scopes.js	/^function canHazAccess (notFree) {$/;"	f
+car	ObjectsAndPrototypesAndMore/cofigurable.js	/^var car = {};$/;"	v
+car	ObjectsAndPrototypesAndMore/enumerable.js	/^var car = {};$/;"	v
+car	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var car = {};$/;"	v
+car	ObjectsAndPrototypesAndMore/writable.js	/^var car = {};$/;"	v
+car	functions/closers.js	/^var car;$/;"	v
+carFactory	functions/closers.js	/^function carFactory (kind) {$/;"	f
+carKey.onclick	functions/scopes.js	/^        console.log(carKey);$/;"	f
+cars.doors	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var cars = {$/;"	p
+directory.children	functions/MyPractice/recursion.js	/^var directory = {$/;"	p
+dostringFromArray	functions/MyPractice/someArrayPractice.js	/^function dostringFromArray (ar) {$/;"	f
+eternal	practice/animatedString.html	/^    function eternal(ly){$/;"	f
+foo	ObjectsAndPrototypesAndMore/literalTypeDeclaration.js	/^    function foo() {$/;"	f
+foo	ObjectsAndPrototypesAndMore/literalTypeDeclaration.js	/^    }$/;"	c
+foo	functions/higherOrderFunctions.js	/^function foo(funct, arg) {$/;"	f
+foo	tests.js	/^function foo (a, b) {$/;"	f
+foo.foo	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var foo = {$/;"	p
+foo.sayHi	ObjectsAndPrototypesAndMore/literalTypeDeclaration.js	/^    foo.prototype.sayHi = window.alert;$/;"	m
+foo2	functions/higherOrderFunctions.js	/^function foo2 (arg) {$/;"	f
+foz	ObjectsAndPrototypesAndMore/literalTypeDeclaration.js	/^var foz = new Object();$/;"	c
+function.sayHey	functions/functionTypes.js	/^    function sayHey() {$/;"	f
+getEvenNumbers	Codewars/practice.js	/^function getEvenNumbers(numbersArray) {$/;"	f
+iAmFree	functions/scopes.js	/^var iAmFree = "I am Free!";$/;"	v
+isLie	functions/ImmediatelyInvoked.js	/^    var isLie = function (val) {$/;"	f
+isetta.drive	ObjectsAndPrototypesAndMore/prototypeTests.js	/^var isetta = new Car(3);$/;"	c
+looper	practice/animatedString.html	/^    function looper() {$/;"	f
+makeNote	functions/ImmediatelyInvoked.js	/^    function makeNote(message) {$/;"	f
+nameFunction	functions/debuging.js	/^var nameFunction = function named () {$/;"	f
+named	functions/debuging.js	/^var nameFunction = function named () {$/;"	f
+num	functions/pathByRefferenceAndValue.js	/^var num = 1;$/;"	v
+object.foo	functions/pathByRefferenceAndValue.js	/^var object = { foo: 'bar' };$/;"	p
+outer	functions/closers.js	/^;function outer (name) {$/;"	f
+pop	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var pop = function(name) {$/;"	c
+pop.valueOf	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^pop.prototype.valueOf = function() {\/\/ adding valueOf function to the prototype of pop.$/;"	m
+proxy	functions/closers.js	/^    };$/;"	m
+rC	practice/animatedString.html	/^function rC() {$/;"	f
+repeatEternal	practice/animatedString.html	/^function repeatEternal(str, time, rdiv, startReversed){$/;"	f
+return	functions/closers.js	/^    var inner;$/;"	f
+sayHo	functions/functionTypes.js	/^    }$/;"	f
+sayHo	functions/functionTypes.js	/^var sayHo;$/;"	v
+secret	ObjectsAndPrototypesAndMore/singeltone.js	/^var secret = secretStore;$/;"	v
+secret2	ObjectsAndPrototypesAndMore/singeltone.js	/^var secret2 = secretStore;$/;"	v
+shirt	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var shirt = {};$/;"	v
+showDir	functions/MyPractice/recursion.js	/^function showDir (dir, deph) {$/;"	f
+start	functions/closers.js	/^    wheelsCount = 4;$/;"	f
+stringGenerator	practice/animatedString.html	/^        function stringGenerator(str) {$/;"	f
+sum	functions/Arguments.js	/^var sum = function() {$/;"	f
+sum	functions/ECMAscript6FatArrow.js	/^var sum = [1,2,3,4,5,6,7];$/;"	v
+sum2	functions/Arguments.js	/^var sum2 = function() {$/;"	f
+timeoutLoop	practice/animatedString.html	/^function timeoutLoop(fn, freq, callback) {$/;"	f
+tree.children	functions/recursion.js	/^    name: "Users",$/;"	p
+tree.name	functions/recursion.js	/^var tree = {$/;"	p
+type	practice/animatedString.html	/^function type(node, str, freq) {$/;"	f
+user.sayName	tests.js	/^var user = {$/;"	m
+walk	functions/recursion.js	/^    var walker = function walk(branch, newDeph) {$/;"	f
+walker	functions/recursion.js	/^    var walker = function walk(branch, newDeph) {$/;"	f
+z	functions/ECMAscript6FatArrow.js	/^var z = sum.reduceRight( function (prev, current) {$/;"	v
+ziplockBag	ObjectsAndPrototypesAndMore/objectBuildInFunctions.js	/^var ziplockBag = {};$/;"	v

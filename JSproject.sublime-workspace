@@ -24,9 +24,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 180.0,
+		"height": 54.0,
 		"selected_items":
 		[
+			[
+				"ssjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"ssjs",
 				"Set Syntax: JavaScript"
@@ -60,15 +68,11 @@
 				"Package Control: Remove Package"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
 				"add",
 				"Project: Add Folder"
 			]
 		],
-		"width": 575.0
+		"width": 521.0
 	},
 	"console":
 	{
@@ -88,6 +92,7 @@
 	},
 	"file_history":
 	[
+		"/home/victorino/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 		"/home/victorino/.config/sublime-text-3/Packages/SublimeTextXdebug/Xdebug.sublime-settings",
 		"/var/www/PHP_LERNING/PHPLEARNING.sublime-project",
 		"/home/victorino/.config/sublime-text-3/Packages/User/Xdebug.sublime-settings",

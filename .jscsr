@@ -9,8 +9,6 @@
 "disallowKeywords": ["with"],
 "disallowMultipleLineBreaks": true,
 "disallowKeywordsOnNewLine": ["else"],
-"excludeFiles": ["test/data/*.js"],
-"excludeFiles": ["Scripts/kendo/*"],
 "validateJSDoc": {
     "checkParamNames": true,
     "requireParamTypes": true
