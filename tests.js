@@ -26,6 +26,4 @@ foo2.bar = "vik2";
 
 console.log(foo2);
 
-if (true) {gfd};
-
 console.log(foo.bar);
