@@ -71,7 +71,6 @@
 
 
     "excludeFiles": ["node_modules/**"],
-    "validateParameterSeparator": ", ",
     "safeContextKeyword": ["that"],
     "validateLineBreaks": "LF"
  
