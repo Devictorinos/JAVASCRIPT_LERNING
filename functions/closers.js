@@ -1,21 +1,21 @@
 ;function outer (name) {
-    var hello = "Hi";
-    var inner;
 
-    return inner = function() {
-        return hello + " " + name; 
+    var hello = "Hi", inner;
+    return inner = function () {
+
+        return hello + " " + name;
+
     };
+
 }
 
 // ecmascript 6 example for now only work in mozilla
 /*;var outer (name) => {
     var hello = "hi",
     inner;
- 
     inner => hello + " " + name;
 }
 */
-
 
 var name  = outer("mark")();
 
@@ -25,21 +25,27 @@ console.log("================================>");
 
 var car;
 function carFactory (kind) {
+
     var wheelsCount, start;
 
     wheelsCount = 4;
 
     start = function () {
+
         console.log('started with ' + wheelsCount + ' wheels');
+
     };
 
-    return ( function () {
+    return (function () {
+
         return {
             make: kind,
             wheels: wheelsCount,
             startEngine: start
         };
+
     }());
+
 }
 
 car = carFactory('Tesla');
@@ -50,10 +56,9 @@ car.startEngine();
 
 console.log("================================>");
 
-
 var Car, proxy, tesla;
 
-Car2 = function () {
+/*Car2 = function () {
     this.start = function () {
         return console.log("car started");
     };
@@ -67,7 +72,6 @@ Car2 = function () {
 
             this.start();
         }, this);
-        
         return this;
     };
 
@@ -75,9 +79,28 @@ Car2 = function () {
         return callback.apply(self, arguments);
     };
 
-}
+}*/
 
-tesla2 = new Car2();
- 
+//tesla2 = new Car2();
 // Once a user click's the #carKey element they will see "car started"
-tesla2.turnKey();
+//tesla2.turnKey();
+
+console.log("--------> closers with settimeout");
+
+colors = [ "green" ["s" , "s"], "yellow", "pink", "blue" ];
+
+for (var i = 0; i < colors.length; i++) {
+
+    setTimeout((function (i) {
+
+        return function () {
+
+                console.log(colors);
+                console.log(colors[i]);
+                console.log(i);
+
+                }
+
+    })(i), 100);
+
+};

@@ -1,40 +1,79 @@
 {
     "requireCurlyBraces": [ "if", "else", "for", "while", "do" ],
     "requireSpaceAfterKeywords": [ "if", "else", "for", "while", "do", "switch", "return", "try", "catch" ],
+
     "requireParenthesesAroundIIFE": true,
+
     "requireSpacesInFunctionExpression": {
         "beforeOpeningCurlyBrace": true
 
         
     },
-    "disallowSpacesInFunctionExpression": {
-        "beforeOpeningRoundBrace": true
+    "requireSpacesInAnonymousFunctionExpression": {
+        "beforeOpeningRoundBrace": true,
+        "beforeOpeningCurlyBrace": true
     },
 
-    "requireMultipleVarDecl": true,
-    "disallowEmptyBlocks": true,
-    "requireCommaBeforeLineBreak": true,
-    "disallowSpacesInsideArrayBrackets": true,
+    "requireSpacesInFunctionDeclaration": {
+        "beforeOpeningRoundBrace": true,
+        "beforeOpeningCurlyBrace": true
+    },
+
+    "requireSpacesInFunction": {
+        "beforeOpeningRoundBrace": true,
+        "beforeOpeningCurlyBrace": true
+    },
+
     "requireSpacesInsideObjectBrackets": "all",
     "requireSpacesInsideArrayBrackets": "all",
-     "requireOperatorBeforeLineBreak": ["?", "+", "-", "/", "*", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
-    "requireSpaceBeforeBinaryOperators": ["+", "-", "/", "*", "=", "==", "===", "!=", "!=="],
-    "requireSpaceAfterBinaryOperators": ["+", "-", "/", "*", "=", "==", "===", "!=", "!=="],
-    "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-"],
-    "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
-    "disallowKeywords": [ "with" ],
-    "disallowMultipleLineBreaks": true,
-    "disallowKeywordsOnNewLine": [ "else" ],
-    "requireLineFeedAtFileEnd": true,
-    "disallowSpaceAfterObjectKeys": true,
-    "validateLineBreaks": "LF",
-    "disallowMixedSpacesAndTabs": true,
-    "disallowTrailingWhitespace": true,
-    "disallowKeywordsOnNewLine": ["else", "catch"],
     "requireLineFeedAtFileEnd": true,
     "requireCapitalizedConstructors": true,
     "requireDotNotation": true,
+    "requireMultipleVarDecl": true,
+    "requireLineFeedAtFileEnd": true,
+    "requireOperatorBeforeLineBreak": 
+    [
+        "?", "+", "-", "/", "*", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="
+    ],
+
+    "requireSpaceBeforeBinaryOperators": 
+    [
+        "+", "-", "/", "*", "=", "==", "===", "!=", "!=="
+    ],
+
+    "requireSpaceAfterBinaryOperators": 
+    [
+        "+", "-", "/", "*", "=", "==", "===", "!=", "!=="
+    ],
+
+    "requireBlocksOnNewline": true,
+    "requirePaddingNewlinesInBlocks": true,
+    "requireCommaBeforeLineBreak": true,
+    "requireCamelCaseOrUpperCaseIdentifiers": true,
+   
+
+
+    "disallowEmptyBlocks": true,
+    "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-"],
+    "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
+    "disallowKeywords": [ "with" ],
+    "disallowSpaceAfterObjectKeys": true,  
+    "disallowKeywordsOnNewLine": ["else", "catch"],
+    "disallowSpacesInsideParentheses": true,
+    "disallowQuotedKeysInObjects": true,
+    "disallowMultipleLineStrings": true,
     "disallowMultipleLineBreaks": true,
-    "excludeFiles": ["node_modules/**"]
+    "disallowMixedSpacesAndTabs": "smart",
+    "disallowTrailingWhitespace": true,
+    "disallowTrailingComma": true,
+    "disallowNewlineBeforeBlockStatements": true,
+
+
+
+    "excludeFiles": ["node_modules/**"],
+    "validateParameterSeparator": ", ",
+    "safeContextKeyword": ["that"],
+    "validateLineBreaks": "LF"
+ 
 
 }

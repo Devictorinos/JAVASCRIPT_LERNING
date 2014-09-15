@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
 				"product",
 				"ProductName"
 			],
@@ -24,16 +28,20 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 54.0,
+		"height": 138.0,
 		"selected_items":
 		[
 			[
-				"ssjson",
-				"Set Syntax: JSON"
+				"remove",
+				"Package Control: Remove Package"
 			],
 			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"ssjson",
+				"Set Syntax: JSON"
 			],
 			[
 				"ssjs",
@@ -64,10 +72,6 @@
 				"Xdebug: Stop Debugging"
 			],
 			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
 				"add",
 				"Project: Add Folder"
 			]
@@ -92,6 +96,7 @@
 	},
 	"file_history":
 	[
+		"/home/victorino/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 		"/home/victorino/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 		"/home/victorino/.config/sublime-text-3/Packages/SublimeTextXdebug/Xdebug.sublime-settings",
 		"/var/www/PHP_LERNING/PHPLEARNING.sublime-project",
@@ -173,7 +178,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 188.0
+		"height": 215.0
 	},
 	"output.find_results":
 	{
@@ -201,6 +206,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/var/www/PHP_LERNING/PHPLEARNING.sublime-project"
+			]
 		],
 		"width": 380.0
 	},
@@ -219,7 +228,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 214.0,
+	"side_bar_width": 293.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
