@@ -1,4 +1,4 @@
-/* togglig state of an object */
+/* togglig state of an object  with bitwise XOR " ^ "  */
 
 var Lite = {
 
@@ -25,3 +25,15 @@ Lite.toggle();
 Lite.toggle();
 Lite.toggle();
 Lite.toggle();
+
+/* bitwise NOT */
+
+//9
+
+console.log(~-10);
+//-11
+console.log(~10);
+//18
+console.log(2 * ~-10);
+//-22
+console.log(2 * ~10);

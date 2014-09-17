@@ -29,7 +29,6 @@
     "requireLineFeedAtFileEnd": true,
     "requireCapitalizedConstructors": true,
     "requireDotNotation": true,
-    "requireMultipleVarDecl": true,
     "requireLineFeedAtFileEnd": true,
     "requireOperatorBeforeLineBreak": 
     [
@@ -64,7 +63,7 @@
     "disallowMultipleLineStrings": true,
     "disallowMultipleLineBreaks": true,
     "disallowMixedSpacesAndTabs": "smart",
-    "disallowTrailingWhitespace": true,
+    
     "disallowTrailingComma": true,
     "disallowNewlineBeforeBlockStatements": true,
 
