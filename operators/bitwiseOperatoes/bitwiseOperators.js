@@ -29,7 +29,6 @@ Lite.toggle();
 /* bitwise NOT */
 
 //9
-
 console.log(~-10);
 //-11
 console.log(~10);
@@ -37,3 +36,18 @@ console.log(~10);
 console.log(2 * ~-10);
 //-22
 console.log(2 * ~10);
+
+/* Parsing Strings into Numbers */
+var num = "100.7";
+
+console.log(parseInt(num,10) === ~~num);
+console.log(~~num);
+
+
+//Unicode for Variables
+var \r1000 = {\r1001: function () {
+return 'Unicode';
+    }
+};
+// => 'Unicode'
+console.log(\r1000.\r1001()); 

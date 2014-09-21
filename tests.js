@@ -1,6 +1,8 @@
 var user = {
-        sayName: function(jhjgh) {
-            console.log(this.name)
+        sayName: function (jhjgh) {
+
+            console.log(this.name);
+            
         }
 
       };
