@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script>
-    var getUniqID = (function () {
+/*    var getUniqID = (function () {
         var id = 0;
 
         return function (element) {
@@ -25,8 +27,91 @@
     console.log(getUniqID(elementWithoutID));
     console.log(getUniqID(elementWithoutID2));
 
+*/
+ 
+var person = {};
+var bank = {
+    funds: 0,
+    receiveDepositFrom: function(person) {
+     
+    // Now NaN because person.funds is undefined.
+    this.funds += person.funds;
 
-    </script>
+    person.funds = 0;
+
+    }
+};
+ 
+// => undefined
+console.log(person.funds);
+
+(function work (person) {
+ 
+// Assumes you have jQuery installed
+$.ajax({
+url: "http://localhost/JAVASCRIPT_LERNING/functions/someJson.php",
+context: document.body,
+type: "json" }).done(function (data) {
+
+person.funds = 100;
+console.log(person);
+
+});
+
+})(person);
+ 
+// => undefined
+console.log(person.funds);
+
+bank.receiveDepositFrom(person);
+ 
+// => 0
+console.log(person.funds);
+
+var person2 = {};
+var bank2 = {
+    
+    funds: 0,
+    receiveDepositFrom: function (person2) {
+
+        this.funds += person2.funds;
+        person2.funds = 0;
+
+    }
+
+};
+
+console.log(person2.funds);
+
+(function work2 (callback) {
+
+    $.ajax({
+        beforeSend: function (xhr) { 
+
+            xhr.setRequestHeader("Content-Type","application/json");
+            xhr.setRequestHeader("Accept","application/json");
+
+        },
+
+        url: "http://localhost/JAVASCRIPT_LERNING/functions/someJson.php",
+        context: document.body
+        //dataType: "json"
+    }).done(function (data) {
+
+        callback(data.amounts);
+
+    });
+
+})(function (amount) {
+
+    person2.funds = amount;
+
+    console.log(person2.funds);
+    bank2.receiveDepositFrom(person2);
+    console.log(person2.funds);
+
+});
+</script>
 </head>
 <body>
     

@@ -29,3 +29,4 @@ foo2.bar = "vik2";
 console.log(foo2);
 
 console.log(foo.bar);
+

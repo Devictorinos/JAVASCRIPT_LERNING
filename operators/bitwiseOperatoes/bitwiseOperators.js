@@ -45,9 +45,9 @@ console.log(~~num);
 
 
 //Unicode for Variables
-var \r1000 = {\r1001: function () {
+var \u1000 = {\u1001: function () {
 return 'Unicode';
     }
 };
 // => 'Unicode'
-console.log(\r1000.\r1001()); 
+console.log(\u1000.\u1001()); 
