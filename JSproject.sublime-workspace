@@ -28,9 +28,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 159.0,
+		"height": 117.0,
 		"selected_items":
 		[
+			[
+				"ssphp",
+				"Set Syntax: PHP"
+			],
+			[
+				"ssjson",
+				"Set Syntax: JSON"
+			],
 			[
 				"ssjs",
 				"Set Syntax: JavaScript"
@@ -42,14 +50,6 @@
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"ssjson",
-				"Set Syntax: JSON"
-			],
-			[
-				"ssphp",
-				"Set Syntax: PHP"
 			],
 			[
 				"pro",
@@ -96,6 +96,7 @@
 	},
 	"file_history":
 	[
+		"/var/www/JAVASCRIPT_LERNING/functions/scopeTests.html",
 		"/var/www/JAVASCRIPT_LERNING/.jscs.json",
 		"/var/www/JAVASCRIPT_LERNING/JSproject.sublime-project",
 		"/var/www/JAVASCRIPT_LERNING/functions/closers.js",
@@ -232,7 +233,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 293.0,
+	"side_bar_width": 350.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

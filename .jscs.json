@@ -46,7 +46,6 @@
     ],
 
     "requireBlocksOnNewline": true,
-    "requirePaddingNewlinesInBlocks": true,
     "requireCommaBeforeLineBreak": true,
     "requireCamelCaseOrUpperCaseIdentifiers": true,
    
