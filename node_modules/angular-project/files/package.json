@@ -1,0 +1,29 @@
+{
+  "name": "project",
+  "version": "0.0.1",
+  "description": "Angular JS Project",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-usemin": "~0.1.12",
+    "grunt-concurrent": "~0.3.1",
+    "grunt-nodemon": "~0.1.1",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-s3": "~0.2.0-alpha.3",
+    "grunt-cache-bust": "0.0.6",
+    "simple-http-server-lc": "~0.1.1",
+    "commander": "~2.0.0",
+    "colors": "~0.6.2"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD"
+}

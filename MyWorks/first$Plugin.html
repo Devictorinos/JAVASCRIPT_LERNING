@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plugin</title>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/color/jquery.color-2.1.2.js"></script>
+
+    <script src="plugin.js"></script>
+    <script>
+    $(document).ready(function(){
+     // $('.box').redbox();
+      $('.box').randomColor('Java Script');
+    });
+    </script>
+
+    <style>
+        .box {
+            width: 350px;
+            height: 100px;
+            border: 1px solid #000;
+           
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        p {
+            font-weight: bold;
+            line-height: 100px; 
+           /*  display: block;
+           height: 60px; */
+            text-align: center;
+            font-size: 50px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 100px auto;
+            
+            position: relative;
+            width: 350px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p></p>
+        </div>
+    </div>
+ 
+</body>
+</html>
