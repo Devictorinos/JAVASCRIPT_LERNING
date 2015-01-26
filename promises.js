@@ -3,6 +3,11 @@ var test;
 var user;
 var user1;
 var promise;
+
+function sayYes() {
+    console.log('Yes Yes Yes');
+}
+
 function login (a, b, callback) {
 
     if (a === "user" && b === "password") {
