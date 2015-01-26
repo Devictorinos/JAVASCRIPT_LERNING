@@ -1,4 +1,5 @@
 // CPS style
+var test;
 var user;
 var user1;
 var promise;
