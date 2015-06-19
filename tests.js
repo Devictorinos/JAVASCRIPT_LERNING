@@ -22,7 +22,7 @@ function foo (a, b) {
 
 foo.bar = "vik";
 
-var foo2 = foo;
+var foo2 = foo
 
 foo2.bar = "vik2";
 
